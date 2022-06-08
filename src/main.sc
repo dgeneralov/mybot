@@ -1,3 +1,5 @@
+require: slotfilling/slotFilling.sc
+  module = sys.zb-common
 
 theme: /
     state: Start
@@ -32,3 +34,4 @@ theme: /
 
         state: CallAgent
             a: Соединяю с оператором
+
