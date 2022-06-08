@@ -24,7 +24,7 @@ theme: /
         state: clarification
             q: *(*хочу уточнить*/*пропущенный*/*мне звонили*)*
             a: Вы записаны на иследование ?
-            go!: /Start/boolean
+            go: /Start/boolean
 
 
 
@@ -33,6 +33,11 @@ theme: /
             q: *(*да*)*
             a: В каком городе ?
             go: /Start/CitySelection
+            
+            state: false
+            q: *(*нет*)*
+            a: В каком городе ?
+            go!: /Start/CallAgent
 
         # service
         state: Service
