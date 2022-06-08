@@ -33,11 +33,9 @@ theme: /
             q: *(*да*)*
             a: В каком городе ?
             go: /Start/CitySelection
-            
-            state: false
             q: *(*нет*)*
-            a: В каком городе ?
-            go!: /Start/CallAgent
+            go: /Start/CallAgent
+            
 
         # service
         state: Service
