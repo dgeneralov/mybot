@@ -31,8 +31,8 @@ theme: /
         # boolean
         state: boolean
             q: *(*да*)*
-            a: Вы записаны на иследование?
-            go!: /Start/CitySelection
+            a: В каком городе ?
+            go: /Start/CitySelection
 
         # service
         state: Service
