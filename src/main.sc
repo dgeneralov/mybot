@@ -25,19 +25,18 @@ theme: /
             q: *(*хочу уточнить*/*пропущенный*/*мне звонили*)*
             a: Вы записаны на иследование ?
 
+             # yes
+            state: yes
+                q: *(*да*)*
+                a: В каком городе ?
 
-
-        # yes
-        state: yes
-            q: *(*да*)*
-            a: В каком городе ?
-            
-        # no
-        state: no
-            q: *(*нет*)*
-            go: /Start/CallAgent
+            # no
+            state: no
+                q: *(*нет*)*
+                go: /Start/CallAgent
             
 
+            
         # service
         state: Service
             q: *(*Луч*|*кибер*|*химиотерапия*|*МРТ*|*КТ*|*офэкт*|*узи*|*анализ*|*врач*|*мнение*)*
@@ -60,3 +59,7 @@ theme: /
         state: CallAgent
             a: Соединяю с оператором
 
+
+        state: CatchAll
+            event: noMatch
+            a: Вы сказали: {{ $request.query }}
