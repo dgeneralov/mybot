@@ -33,7 +33,7 @@ theme: /
             a: В каком городе ?
             
         # no
-        state: yes
+        state: no
             q: *(*нет*)*
             go: /Start/CallAgent
             
