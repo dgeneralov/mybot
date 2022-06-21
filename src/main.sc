@@ -44,30 +44,13 @@ theme: /
                     a: В каком городе вы планируете проходить обследование?
             
 
-
-             # yes
-            state: yes
-                q: *(*да*)*
-                a: В каком городе ?
-
-            # no
-            state: no
-                q: *(*нет*)*
-                go: /Start/CallAgent
-            
-
-            
-
-
-
-
                         state: OtherCity
                             q: *(*платно*)*
                             go: CallAgent
 
-        # call agent
-        state: CallAgent
-            a: Соединяю с оператором
+            # call agent
+            state: CallAgent
+                a: Соединяю с оператором
 
 
         state: CatchAll
