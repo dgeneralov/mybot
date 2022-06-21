@@ -15,7 +15,7 @@ theme: /
         state: record
             q: *(*записаться*/*услуг*/*оформить запись*)*
             a: куда вы хотите записаться?
-            go!: /Start//information
+            go: /Start//information
             
         #clarification
         state: clarification
