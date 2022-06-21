@@ -53,9 +53,9 @@ theme: /
                     q: *(*платно*)*
                     go: CallAgent
 
-            # call agent
-            state: CallAgent
-                a: Соединяю с оператором
+        # call agent
+        state: CallAgent
+            a: Соединяю с оператором
 
 
         state: CatchAll
