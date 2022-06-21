@@ -15,7 +15,7 @@ theme: /
         state: record
             q: *(*записаться*/*услуг*/*оформить запись*)*
             a: куда вы хотите записаться?
-            go: /Start/clarification/information/Service
+            go!: /Start//information
             
         #clarification
         state: clarification
@@ -23,30 +23,30 @@ theme: /
             a: Вы записаны на иследование ?
             
         # information block
-            state: information
-                q: *(*информация*/*узнать*/*услуг*/*предоставить информацию*)*
-                a: Какая услуга вас интересует?
-                go: /Start/record/information/Service
-            
-            
-                # service
-                state: Service
-                    q: *(*Луч*|*кибер*|*химиотерапия*|*МРТ*|*КТ*|*офэкт*|*узи*|*анализ*|*врач*|*мнение*)*
-                    go: CallAgent
+        state: information
+            q: *(*информация*/*узнать*/*услуг*/*предоставить информацию*)*
+            a: Какая услуга вас интересует?
+            go: /Start/record/information/Service
+        
                     
-                # Citis
-                state: CitySelection
-                    q: *(*Екатеринбург*|*Курск*|*Белгород*|*Пермь*|*Москва*|*Уфа*)*
-                    a: Я передал ваши данные в соответствующий цент. Скоро с Вами свяжется специалист.
             
-                    state: Record_pet
+            # service
+            state: Service
+                q: *(*Луч*|*кибер*|*химиотерапия*|*МРТ*|*КТ*|*офэкт*|*узи*|*анализ*|*врач*|*мнение*)*
+                go: CallAgent
+                    
+            # Citis
+            state: CitySelection
+                q: *(*Екатеринбург*|*Курск*|*Белгород*|*Пермь*|*Москва*|*Уфа*)*
+                a: Я передал ваши данные в соответствующий цент. Скоро с Вами свяжется специалист.
+            
+                state: Record_pet
                     q: *(*пэт*)*
                     a: В каком городе вы планируете проходить обследование?
-            
 
-                        state: OtherCity
-                            q: *(*платно*)*
-                            go: CallAgent
+                state: OtherCity
+                    q: *(*платно*)*
+                    go: CallAgent
 
             # call agent
             state: CallAgent
