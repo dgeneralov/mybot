@@ -15,7 +15,7 @@ theme: /
         state: record
             q: *(*записаться*/*услуг*/*оформить запись*)*
             a: куда вы хотите записаться?
-            go: Service
+            go: /
             
         #clarification
         state: clarification
@@ -26,7 +26,7 @@ theme: /
         state: information
             q: *(*информация*/*узнать*/*услуг*/*предоставить информацию*)*
             a: Какая услуга вас интересует?
-            go: Service
+            go: /Start/infoStep
         
                     
             
@@ -34,6 +34,7 @@ theme: /
             
         # service block
         state: infoStep
+            q: 
             
             # service
             state: Service
