@@ -26,9 +26,14 @@ theme: /
         state: information
             q: *(*информация*/*узнать*/*услуг*/*предоставить информацию*)*
             a: Какая услуга вас интересует?
-            go: /Start/record/information/Service
+            go: /Start/
         
                     
+            
+            
+            
+        # service block
+        state: infoStep
             
             # service
             state: Service
