@@ -11,18 +11,18 @@ theme: /
             a: Здравствуйте! чем я могу Вам помочь?
             
 
-            # record block
-            state: record
-                q: *(*записаться*/*услуг*/*оформить запись*)*
-                a: куда вы хотите записаться?
-                go: /Start/record/information/Service
+        # record block
+        state: record
+            q: *(*записаться*/*услуг*/*оформить запись*)*
+            a: куда вы хотите записаться?
+            go: /Start/record/information/Service
             
-            #clarification
-            state: clarification
-                q: *(*хочу уточнить*/*пропущенный*/*мне звонили*)*
-                a: Вы записаны на иследование ?
+        #clarification
+        state: clarification
+            q: *(*хочу уточнить*/*пропущенный*/*мне звонили*)*
+            a: Вы записаны на иследование ?
             
-            # information block
+        # information block
             state: information
                 q: *(*информация*/*узнать*/*услуг*/*предоставить информацию*)*
                 a: Какая услуга вас интересует?
@@ -61,9 +61,9 @@ theme: /
 
 
 
-            state: OtherCity
-                q: *(*платно*)*
-                go: CallAgent
+                        state: OtherCity
+                            q: *(*платно*)*
+                            go: CallAgent
 
         # call agent
         state: CallAgent
