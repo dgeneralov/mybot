@@ -33,6 +33,7 @@ theme: /
 theme: /
     state: infoStep
         q!: *infoStep
+        a: штош
 
             # service
             state: Service
