@@ -32,7 +32,7 @@ theme: /
 
 theme: /
     state: infoStep
-        q!: *start
+        q!: *infoStep
 
             # service
             state: Service
