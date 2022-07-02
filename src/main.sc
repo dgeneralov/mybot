@@ -15,7 +15,7 @@ theme: /
         state: record
             q: *(*записаться*/*услуг*/*оформить запись*)*
             a: куда вы хотите записаться?
-            go: /Start
+            go: /infoStep
             
             
         #clarification
@@ -30,34 +30,30 @@ theme: /
             go: /Start/infoStep
         
 
-theme: /
-    state: infoStep
-        q!: *infoStep
-        a: штош
 
-            # service
-            state: Service
-                q: *(*Луч*|*кибер*|*химиотерапия*|*МРТ*|*КТ*|*офэкт*|*узи*|*анализ*|*врач*|*мнение*)*
-                go: CallAgent
+        # service
+        state: Service
+            q: *(*Луч*|*кибер*|*химиотерапия*|*МРТ*|*КТ*|*офэкт*|*узи*|*анализ*|*врач*|*мнение*)*
+            go: CallAgent
                     
             # Citis
             state: CitySelection
                 q: *(*Екатеринбург*|*Курск*|*Белгород*|*Пермь*|*Москва*|*Уфа*)*
                 a: Я передал ваши данные в соответствующий цент. Скоро с Вами свяжется специалист.
             
-                state: Record_pet
-                    q: *(*пэт*)*
-                    a: В каком городе вы планируете проходить обследование?
+        state: Record_pet
+            q: *(*пэт*)*
+            a: В каком городе вы планируете проходить обследование?
 
-                state: OtherCity
-                    q: *(*платно*)*
-                    go: CallAgent
+        state: OtherCity
+            q: *(*платно*)*
+            go: CallAgent
 
-        # call agent
+            # call agent
         state: CallAgent
             a: Соединяю с оператором
 
 
-        state: CatchAll
-            event: noMatch
-            a: Простите я вас не поняла. Я могу расказать вам про услуги или помочь оформить запись.
+    state: CatchAll
+        event: noMatch
+        a: Простите я вас не поняла. Я могу расказать вам про услуги или помочь оформить запись.
