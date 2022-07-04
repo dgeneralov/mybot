@@ -48,8 +48,8 @@ theme: /
             go: CallAgent
 
             # call agent
-    state: CallAgent
-        a: Соединяю с оператором
+        state: CallAgent
+            a: Соединяю с оператором
 
 
     state: CatchAll
