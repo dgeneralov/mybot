@@ -32,7 +32,7 @@ theme: /
         # service
         state: Service
             q: *(*Луч*/*кибер*/*химиотерапия*/*МРТ*/*КТ*/*офэкт*/*узи*/*анализ*/*врач*/*мнение*)*
-            go: CallAgent
+            go!: CallAgent
                     
             # Citis
             state: CitySelection
